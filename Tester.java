@@ -14,11 +14,18 @@ public class Tester {
       { 3, 4, 1, 2 } 
     };
 
+    int[][] E = { 
+      { 2, 4, 2 }, 
+      { 2, 2, 2 } 
+    };
+
     System.out.println(Arrays.toString(ArrayOps.sumRows(A))); // [12, 8, -14]
     System.out.println(Arrays.toString(ArrayOps.largestInRows(A))); // [12, 7, 2]
     System.out.println(ArrayOps.sum(B)); // 9
     System.out.println(Arrays.toString(ArrayOps.sumCols(A))); // [3, -4, 16, -9]
     System.out.println(ArrayOps.isRowMagic(C)); // true
     System.out.println(ArrayOps.isColMagic(C)); // false
+    System.out.println(ArrayOps.isLocationMagic(E, 0, 1)); // false
+    System.out.println(ArrayOps.isLocationMagic(E, 1, 1)); // true
   }
 }
